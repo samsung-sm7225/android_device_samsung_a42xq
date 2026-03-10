@@ -16,6 +16,11 @@
 
 LOCAL_PATH := device/samsung/a42xq
 
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(COMMON_PATH)/bluetooth/include
+
+TARGET_HAS_UDFPS := true
+TARGET_HAS_AMOLED := true
+
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
@@ -33,3 +38,5 @@ PRODUCT_PACKAGES += \
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml
+
+TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
