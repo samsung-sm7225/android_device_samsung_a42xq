@@ -12,7 +12,8 @@ TARGET_HAS_AMOLED := true
 
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-lineage \
+    WifiResDevice
 
 # call the common setup
 $(call inherit-product, device/samsung/sm7225-common/common.mk)
